@@ -31,8 +31,9 @@ I didn't just hardcode colors. I set up the Tailwind config to act as a **themin
 ## 💻 Tech Stack
 * **Next.js 16** (App Router because we like the bleeding edge)
 * **Tailwind CSS v4** (Because writing CSS files manually is so 2015)
-* **TypeScript** (Strict mode, always)
+* **TypeScript** 
 * **Vercel** (For that sweet, sweet Edge Network deployment)
+* v0 vercel ai (For comprehensive UI)
 
 ## 🏃‍♂️ How to Run It
 You know the drill. It's a standard Next.js app, just leaner.
