@@ -49,7 +49,7 @@ export default function Hero() {
            <div className="absolute inset-0 -z-10 bg-linear-to-t from-indigo-600/20 to-transparent blur-3xl -bottom-20 transform scale-y-50"></div>
            
            {/* The Image Container */}
-           <div className="animate-float group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl backdrop-blur-md transition-transform duration-500 hover:[transform:rotateX(2deg)_scale(1.01)]">
+           <div className="animate-float group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl backdrop-blur-md transition-transform duration-500 hover:transform:[rotateX(2deg)_scale(1.01)]">
               
                 {/* FIX APPLIED HERE:
                    1. Removed 'aspect-16/10' from wrapper
