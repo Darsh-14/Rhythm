@@ -27,10 +27,10 @@ export default function Navbar() { // default export added for easier importing
   }, [])
 
   const navLinks = [
-    { name: "Cadence", href: "#Features" }, // Changed href to match our section IDs
+    { name: "Cadence", href: "#features" }, // Changed href to match our section IDs
     { name: "Solutions", href: "#solutions" },
-    { name: "Pricing", href: "#Pricing" },
-    { name: "Resources", href: "#Footer" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Resources", href: "#footer" },
   ]
 
   return (
