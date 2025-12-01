@@ -1,7 +1,7 @@
 // components/sections/Hero.tsx
 import { ArrowRight, PlayCircle, Sparkles } from '../ui/icons'; 
 
-const HERO_IMAGE_URL = "https://placehold.co/1200x800/171717/f97316?text=Rhythm+AI+Dashboard+Preview";
+const HERO_IMAGE_URL = "/dash.png";
 
 export default function Hero() {
   return (
@@ -49,7 +49,7 @@ export default function Hero() {
            {/* The Float Effect is here: animate-float */}
            <div className="animate-float group relative rounded-2xl border border-white/10 bg-gray-900/40 p-2 shadow-2xl backdrop-blur-md">
               <div className="relative aspect-16/10 w-full overflow-hidden rounded-xl bg-black">
-                <img src= {"https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop"} alt="Dashboard" className="h-full w-full object-cover opacity-90" />
+                <img src= {HERO_IMAGE_URL} alt="Dashboard" className="h-full w-full object-cover opacity-90" />
                 {/* Glossy Overlay */}
                 <div className="absolute inset-0 bg-linear-to-tr from-white/5 to-transparent pointer-events-none"></div>
               </div>
