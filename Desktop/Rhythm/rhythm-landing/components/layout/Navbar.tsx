@@ -2,18 +2,18 @@
 
 import { useState, useEffect } from "react"
 
-// --- FIX 1: USE RELATIVE PATHS TO YOUR LOCAL FILES ---
+// relative paths used
 // We use "../" to go up one folder, then into "ui"
 import { Menu, X, Zap } from "../ui/icons"     
 import { Button } from "../ui/button"
 // ----------------------------------------------------
 
-// --- FIX 2: DEFINE 'cn' HERE TO AVOID IMPORT ERRORS ---
+// cn defined here to resolve import errors
 function cn(...classes: (string | undefined | null | false)[]) {
   return classes.filter(Boolean).join(" ")
 }
 
-export default function Navbar() { // Added 'default' export for easier importing
+export default function Navbar() { // default export added for easier importing
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 

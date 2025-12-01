@@ -1,11 +1,9 @@
 // components/sections/Pricing.tsx
 
-// FIX 1: Use local icons
 import { Check } from "../ui/icons"
-// FIX 2: Use local button
 import { Button } from "../ui/button"
 
-export default function Pricing() { // Added 'default' export
+export default function Pricing() {
   const plans = [
     {
       name: "Starter",
@@ -20,7 +18,7 @@ export default function Pricing() { // Added 'default' export
         "Basic analytics",
       ],
       buttonText: "Get Started",
-      isPro: false, // Simplified logic
+      isPro: false,
     },
     {
       name: "Pro",
@@ -38,7 +36,7 @@ export default function Pricing() { // Added 'default' export
         "API access",
       ],
       buttonText: "Start Free Trial",
-      isPro: true, // Simplified logic
+      isPro: true,
     },
     {
       name: "Enterprise",
@@ -56,7 +54,7 @@ export default function Pricing() { // Added 'default' export
         "Onboarding assistance",
       ],
       buttonText: "Contact Sales",
-      isPro: false, // Simplified logic
+      isPro: false,
     },
   ]
 
@@ -75,22 +73,16 @@ export default function Pricing() { // Added 'default' export
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className={`relative flex flex-col rounded-2xl border bg-white/5 p-8 backdrop-blur-sm transition-transform ${
+            className={`relative flex flex-col rounded-2xl p-8 backdrop-blur-sm transition-transform ${
               plan.isPro
-                ? "scale-105 border-transparent bg-linear-to-b from-orange-500/10 to-red-600/10 shadow-2xl shadow-orange-500/20 md:scale-105"
-                : "border-white/10 hover:border-white/20"
+                ? "scale-105 border border-indigo-500/50 bg-indigo-500/10 shadow-2xl shadow-indigo-500/10 md:scale-105"
+                : "border border-white/10 bg-white/5 hover:border-white/20"
             }`}
           >
-            {/* Gradient border for Pro */}
-            {plan.isPro && (
-              <div className="absolute inset-0 -z-10 rounded-2xl bg-linear-to-br from-orange-500 to-red-600 p-[0.5]">
-                <div className="h-full w-full rounded-2xl bg-black" />
-              </div>
-            )}
-
-            {/* Most Popular Badge */}
+            
+            {/* (Indigo Style) */}
             {plan.badge && (
-              <div className="mb-4 inline-flex self-start rounded-full bg-linear-to-r from-orange-600 to-red-600 px-3 py-1 text-xs font-semibold text-white">
+              <div className="mb-4 inline-flex self-start rounded-full bg-indigo-500 px-3 py-1 text-xs font-semibold text-white">
                 {plan.badge}
               </div>
             )}
@@ -110,7 +102,7 @@ export default function Pricing() { // Added 'default' export
             {/* Button */}
             <div className="mt-8">
               {plan.isPro ? (
-                <Button className="w-full rounded-full bg-linear-to-r from-orange-600 to-red-600 text-white transition-transform hover:scale-105 hover:from-orange-500 hover:to-red-500">
+                <Button className="w-full rounded-full bg-indigo-600 text-white transition-all hover:bg-indigo-500">
                   {plan.buttonText}
                 </Button>
               ) : (
@@ -127,7 +119,8 @@ export default function Pricing() { // Added 'default' export
             <ul className="mt-8 space-y-4">
               {plan.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-orange-500" />
+
+                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-indigo-400" />
                   <span className="text-sm text-gray-300">{feature}</span>
                 </li>
               ))}
